@@ -9,3 +9,4 @@ export default function toggleActive(event){
     // toggle the class active (on some element)
     editableText.classList.toggle('active');
 }
+
