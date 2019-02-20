@@ -1,12 +1,11 @@
 import toggleActive from './toggleActive.js';
 import handleEditorInput from './handleEditorInput.js';
 import addParagraph from './addParagraph.js';
+import Editor from './components/Editor.js';
+import EditableText from './components/EditableText.js';
 
-// select the edit button 
-const editButts = document.querySelectorAll('.edit-button, .save-button');
-// add event listener (click) to each button
-editButts.forEach(button => button.addEventListener('click',
-    toggleActive));
+customElements.define('wysiwyg-editor', Editor);
+customElements.define('wysiwyg-editable-text', EditableText);
 
 // listen for input events from editor
 // when fired, update text or style of sibling text-element
